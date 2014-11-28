@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/control-double-180.png</file>
+        <file>icons/control-pause.png</file>
+        <file>icons/control-stop.png</file>
+        <file>icons/arrow-180.png</file>
+        <file>icons/book-question.png</file>
+        <file>icons/control.png</file>
+        <file>icons/control-double.png</file>
+        <file>icons/disk-save.png</file>
+        <file>icons/edit-outline.png</file>
+        <file>icons/exit.png</file>
+        <file>icons/folder-horizontal-open.png</file>
+        <file>icons/gear.png</file>
+        <file>icons/grid.png</file>
+        <file>icons/magnifier-zoom-in.png</file>
+        <file>icons/magnifier-zoom-out.png</file>
+    </qresource>
+</RCC>

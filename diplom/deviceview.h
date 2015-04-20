@@ -31,8 +31,6 @@ public slots:
     void step(double);
     void setGridVisibility(bool);
 
-
-
 private:
     double scale;
     double L1;

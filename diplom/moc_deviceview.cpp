@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'deviceview.h'
 **
-** Created: Sat Dec 27 12:29:37 2014
+** Created: Sat Apr 18 00:22:31 2015
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
 **
 ** WARNING! All changes made in this file will be lost!

@@ -119,11 +119,11 @@ void DeviceView::paintEvent(QPaintEvent *) {
     painter.drawLine(0, center_y, width(), center_y);
 
     //траектория
-    painter.setPen(QPen(color_map.L1, 2));
+    painter.setPen(QPen(Qt::black, 2));
     painter.setBrush(Qt::NoBrush);
     painter.drawEllipse(QPointF(center_x, center_y), L1 * scale, L1 * scale);
 
-    painter.setPen(QPen(QColor(0,0,0)));
+    painter.setPen(QPen(QColor(color_map.Contour)));
     painter.setBrush(QBrush(color_map.triangle));
     QPolygonF polygon_triangle;
     polygon_triangle.append(QPointF(center_x, center_y));
@@ -154,9 +154,8 @@ void DeviceView::paintEvent(QPaintEvent *) {
     double Cy = center_y - C/sqrt(2) * scale;
     const double n = 20;
 
-    painter.setPen(QPen(color_map.L1, 2));
-    painter.setBrush(QBrush(Qt::gray));
-
+    painter.setPen(QPen(color_map.Contour, 2));
+    painter.setBrush(QBrush(color_map.Piston));
     QPolygonF polygon_B;
     polygon_B.append(QPointF(Bx - n * scale - 10 * scale, By - 10 * scale));
     polygon_B.append(QPointF(Bx - 10 * scale, By - n * scale - 10 * scale));
@@ -173,17 +172,18 @@ void DeviceView::paintEvent(QPaintEvent *) {
 
     double X1A = L1 * cos((135 - Phi)*M_PI/180) * scale;
     double Y1A = L1 * sin((135 - Phi)*M_PI/180) * scale;
-    painter.setPen(QPen(Qt::black, 3));
+
+    painter.setPen(QPen(color_map.L1, 3));
     painter.drawLine(center_x, center_y, X1A + center_x, center_y - Y1A);
 
-    painter.setPen(QPen(Qt::red, 3));
+    painter.setPen(QPen(color_map.L2, 3));
     painter.drawLine(X1A + center_x, center_y - Y1A, Bx, By);
 
-    painter.setPen(QPen(Qt::green, 3));
+    painter.setPen(QPen(color_map.L3, 3));
     painter.drawLine(X1A + center_x, center_y - Y1A, Cx, Cy);
 
-    painter.setPen(QPen(color_map.L1, 2));
-    painter.setBrush(QBrush(Qt::yellow));
+    painter.setPen(QPen(color_map.Contour, 2));
+    painter.setBrush(QBrush(color_map.Hinge));
     painter.drawEllipse(center_x - 5 * scale, center_y - 5 * scale, 10 * scale, 10 * scale);
     painter.drawEllipse(X1A + center_x - 5 * scale, center_y - Y1A - 5 * scale, 10 * scale, 10 * scale);
     painter.drawEllipse(Bx - 5 * scale, By - 5 * scale, 10 * scale, 10 * scale);

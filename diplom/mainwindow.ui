@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>648</width>
-    <height>400</height>
+    <width>673</width>
+    <height>461</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,6 +17,12 @@
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QTabWidget" name="tabWidget_3">
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
@@ -152,7 +158,7 @@
                </property>
               </widget>
              </item>
-             <item row="6" column="0">
+             <item row="6" column="1">
               <spacer name="verticalSpacer">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -164,6 +170,20 @@
                 </size>
                </property>
               </spacer>
+             </item>
+             <item row="7" column="0" colspan="2">
+              <widget class="QPushButton" name="pushButton_4">
+               <property name="text">
+                <string>Сравнить графики</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0" colspan="2">
+              <widget class="QPushButton" name="pushButton_5">
+               <property name="text">
+                <string>Отмена сравнения</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>
@@ -187,12 +207,19 @@
           </widget>
           <widget class="QWidget" name="tab_2">
            <attribute name="title">
-            <string>График</string>
+            <string>Графики скорости</string>
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout">
             <item>
              <widget class="QwtPlot" name="speedPlot"/>
             </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_13">
+           <attribute name="title">
+            <string>Графики ускорения</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
             <item>
              <widget class="QwtPlot" name="speedingupPlot"/>
             </item>
@@ -241,6 +268,12 @@
                </item>
                <item row="0" column="3">
                 <widget class="QLabel" name="label_8">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="text">
                   <string>TextLabel</string>
                  </property>
@@ -325,422 +358,479 @@
        <attribute name="title">
         <string>Механизм 2</string>
        </attribute>
-       <widget class="QWidget" name="widget_4" native="true">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>186</width>
-          <height>286</height>
-         </rect>
-        </property>
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>200</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="baseSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
-         <item>
-          <widget class="QLabel" name="label_13">
-           <property name="text">
-            <string>Параметры Механизма</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QFormLayout" name="formLayout_3">
-           <property name="fieldGrowthPolicy">
-            <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-           </property>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_14">
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QWidget" name="widget_4" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_13">
              <property name="text">
-              <string>Длина L1</string>
+              <string>Параметры Механизма</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="1">
-            <widget class="QDoubleSpinBox" name="doubleSpinBox_L1_3">
-             <property name="decimals">
-              <number>2</number>
+           <item>
+            <layout class="QFormLayout" name="formLayout_3">
+             <property name="fieldGrowthPolicy">
+              <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
              </property>
-             <property name="maximum">
-              <double>100000.000000000000000</double>
-             </property>
-             <property name="value">
-              <double>60.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_15">
-             <property name="text">
-              <string>Длина L2</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QDoubleSpinBox" name="doubleSpinBox_L2_3">
-             <property name="maximum">
-              <double>100000.000000000000000</double>
-             </property>
-             <property name="value">
-              <double>100.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="label_16">
-             <property name="text">
-              <string>Длина L3</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QDoubleSpinBox" name="doubleSpinBox_L3_3">
-             <property name="maximum">
-              <double>100000.000000000000000</double>
-             </property>
-             <property name="value">
-              <double>100.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="label_17">
-             <property name="text">
-              <string>Угол phi </string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QDoubleSpinBox" name="doubleSpinBox_phi_3">
-             <property name="maximum">
-              <double>360.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="label_18">
-             <property name="text">
-              <string>Частота</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QDoubleSpinBox" name="frequencySpinBox_3">
-             <property name="maximum">
-              <double>100000.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <spacer name="verticalSpacer_3">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_14">
+               <property name="text">
+                <string>Длина L1</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_L1_3">
+               <property name="decimals">
+                <number>2</number>
+               </property>
+               <property name="maximum">
+                <double>100000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>130.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_15">
+               <property name="text">
+                <string>Длина L2</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_L2_3">
+               <property name="maximum">
+                <double>100000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>150.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_16">
+               <property name="text">
+                <string>Длина Loa</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_L3_3">
+               <property name="maximum">
+                <double>100000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>60.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_17">
+               <property name="text">
+                <string>Угол phi </string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_phi_3">
+               <property name="maximum">
+                <double>360.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="label_18">
+               <property name="text">
+                <string>Частота</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <widget class="QDoubleSpinBox" name="frequencySpinBox_3">
+               <property name="maximum">
+                <double>100000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>30.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_10">
+               <property name="text">
+                <string>Длина Lbc</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string>Длина Ldc</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox">
+               <property name="maximum">
+                <double>100000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>75.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+               <property name="maximum">
+                <double>100000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>130.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="1">
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="9" column="0" colspan="2">
+              <widget class="QPushButton" name="pushButton_6">
+               <property name="text">
+                <string>Сравнить графики</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="0" colspan="2">
+              <widget class="QPushButton" name="pushButton_7">
+               <property name="text">
+                <string>Отмена сравнения</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
           </layout>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QTabWidget" name="tabWidget_2">
-        <property name="geometry">
-         <rect>
-          <x>190</x>
-          <y>0</y>
-          <width>341</width>
-          <height>301</height>
-         </rect>
-        </property>
-        <property name="currentIndex">
-         <number>0</number>
-        </property>
-        <widget class="QWidget" name="tab_3">
-         <attribute name="title">
-          <string>Механизм 2D</string>
-         </attribute>
-         <layout class="QHBoxLayout" name="horizontalLayout_3"/>
-        </widget>
-        <widget class="QWidget" name="tab_4">
-         <attribute name="title">
-          <string>График</string>
-         </attribute>
-         <layout class="QVBoxLayout" name="verticalLayout_4">
-          <item>
-           <widget class="QwtPlot" name="speedPlot_2"/>
-          </item>
-          <item>
-           <widget class="QwtPlot" name="widget_6"/>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="tab_9">
-         <attribute name="title">
-          <string>Механизм 3D</string>
-         </attribute>
-         <widget class="QWidget" name="widget_5" native="true">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>331</width>
-            <height>261</height>
-           </rect>
-          </property>
          </widget>
-        </widget>
-       </widget>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="tabWidget_2">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_3">
+           <attribute name="title">
+            <string>Механизм 2D</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="DeviceView2" name="deviceview2" native="true"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_14">
+           <attribute name="title">
+            <string>График скорости</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QwtPlot" name="speedPlot_2"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_4">
+           <attribute name="title">
+            <string>График ускорения</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QwtPlot" name="speedingupPlot_2"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_9">
+           <attribute name="title">
+            <string>Механизм 3D</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QWidget" name="widget_5" native="true"/>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
         <string>Механизм 3</string>
        </attribute>
-       <widget class="QWidget" name="widget_7" native="true">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>200</width>
-          <height>286</height>
-         </rect>
-        </property>
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>200</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="baseSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_5">
-         <item>
-          <widget class="QLabel" name="label_19">
-           <property name="text">
-            <string>Параметры Механизма</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QFormLayout" name="formLayout_4">
-           <property name="fieldGrowthPolicy">
-            <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-           </property>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_20">
-             <property name="text">
-              <string>Длина L1</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QDoubleSpinBox" name="doubleSpinBox_L1_4">
-             <property name="decimals">
-              <number>2</number>
-             </property>
-             <property name="maximum">
-              <double>100000.000000000000000</double>
-             </property>
-             <property name="value">
-              <double>60.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_21">
-             <property name="text">
-              <string>Длина L2</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QDoubleSpinBox" name="doubleSpinBox_L2_4">
-             <property name="maximum">
-              <double>100000.000000000000000</double>
-             </property>
-             <property name="value">
-              <double>100.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="label_22">
-             <property name="text">
-              <string>Длина L3</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QDoubleSpinBox" name="doubleSpinBox_L3_4">
-             <property name="maximum">
-              <double>100000.000000000000000</double>
-             </property>
-             <property name="value">
-              <double>100.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="label_23">
-             <property name="text">
-              <string>Угол phi </string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QDoubleSpinBox" name="doubleSpinBox_phi_4">
-             <property name="maximum">
-              <double>360.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="label_24">
-             <property name="text">
-              <string>Частота</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QDoubleSpinBox" name="frequencySpinBox_4">
-             <property name="maximum">
-              <double>100000.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <spacer name="verticalSpacer_4">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QTabWidget" name="tabWidget_4">
-        <property name="geometry">
-         <rect>
-          <x>190</x>
-          <y>0</y>
-          <width>351</width>
-          <height>301</height>
-         </rect>
-        </property>
-        <property name="currentIndex">
-         <number>0</number>
-        </property>
-        <widget class="QWidget" name="tab_10">
-         <attribute name="title">
-          <string>Механизм 2D</string>
-         </attribute>
-         <widget class="QWidget" name="widget_8" native="true">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>331</width>
-            <height>251</height>
-           </rect>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QWidget" name="widget_7" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
           </property>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="tab_11">
-         <attribute name="title">
-          <string>График</string>
-         </attribute>
-         <widget class="QwtPlot" name="qwtPlot">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>341</width>
-            <height>121</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QwtPlot" name="qwtPlot_2">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>120</y>
-            <width>341</width>
-            <height>141</height>
-           </rect>
-          </property>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="tab_12">
-         <attribute name="title">
-          <string>Механизм 3D</string>
-         </attribute>
-         <widget class="QWidget" name="widget_9" native="true">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>341</width>
-            <height>261</height>
-           </rect>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>341</width>
-            <height>261</height>
+            <width>200</width>
+            <height>16777215</height>
            </size>
           </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>Параметры Механизма</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QFormLayout" name="formLayout_4">
+             <property name="fieldGrowthPolicy">
+              <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+             </property>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_20">
+               <property name="text">
+                <string>Длина L1</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_L1_4">
+               <property name="decimals">
+                <number>2</number>
+               </property>
+               <property name="maximum">
+                <double>100000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>60.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_21">
+               <property name="text">
+                <string>Длина L2</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_L2_4">
+               <property name="maximum">
+                <double>100000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>100.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_22">
+               <property name="text">
+                <string>Длина Loa</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_L3_4">
+               <property name="maximum">
+                <double>100000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>100.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_23">
+               <property name="text">
+                <string>Угол phi </string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_phi_4">
+               <property name="maximum">
+                <double>360.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="label_24">
+               <property name="text">
+                <string>Частота</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <widget class="QDoubleSpinBox" name="frequencySpinBox_4">
+               <property name="maximum">
+                <double>100000.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_12">
+               <property name="text">
+                <string>Длина Lcb</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="label_25">
+               <property name="text">
+                <string>Длина Lcd</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_3"/>
+             </item>
+             <item row="5" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_4"/>
+             </item>
+             <item row="8" column="1">
+              <spacer name="verticalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="9" column="0" colspan="2">
+              <widget class="QPushButton" name="pushButton_8">
+               <property name="text">
+                <string>Сравнить графики</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="0" colspan="2">
+              <widget class="QPushButton" name="pushButton_9">
+               <property name="text">
+                <string>Отмена сравнения</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
          </widget>
-        </widget>
-       </widget>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="tabWidget_4">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_10">
+           <attribute name="title">
+            <string>Механизм 2D</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="DeviceView3" name="deviceview3" native="true"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_11">
+           <attribute name="title">
+            <string>График скорости</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <item>
+             <widget class="QwtPlot" name="qwtPlot"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_15">
+           <attribute name="title">
+            <string>График ускорения</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <item>
+             <widget class="QwtPlot" name="qwtPlot_2"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_12">
+           <attribute name="title">
+            <string>Механизм 3D</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <item>
+             <widget class="QWidget" name="widget_9" native="true">
+              <property name="maximumSize">
+               <size>
+                <width>341</width>
+                <height>261</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -751,7 +841,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>648</width>
+     <width>673</width>
      <height>23</height>
     </rect>
    </property>
@@ -792,7 +882,7 @@
     <addaction name="actionStart"/>
     <addaction name="actionNext_frame"/>
     <addaction name="actionInitial_data"/>
-    <addaction name="action_12"/>
+    <addaction name="drop"/>
    </widget>
    <widget class="QMenu" name="menu_5">
     <property name="title">
@@ -857,7 +947,7 @@
   </action>
   <action name="action_7">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/book-question.png</normaloff>:/icons/icons/book-question.png</iconset>
    </property>
    <property name="text">
@@ -874,7 +964,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/control.png</normaloff>
      <normalon>:/icons/icons/control-pause.png</normalon>:/icons/icons/control.png</iconset>
    </property>
@@ -887,7 +977,7 @@
   </action>
   <action name="actionPause">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/control-pause.png</normaloff>:/icons/icons/control-pause.png</iconset>
    </property>
    <property name="text">
@@ -896,7 +986,7 @@
   </action>
   <action name="actionStep_back">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/control-double-180.png</normaloff>:/icons/icons/control-double-180.png</iconset>
    </property>
    <property name="text">
@@ -924,7 +1014,7 @@
     <string>Следующий кадр</string>
    </property>
   </action>
-  <action name="action_12">
+  <action name="drop">
    <property name="text">
     <string>Сброс</string>
    </property>
@@ -996,7 +1086,7 @@
   </action>
   <action name="actionNext_frame">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/control-double.png</normaloff>:/icons/icons/control-double.png</iconset>
    </property>
    <property name="text">
@@ -1008,7 +1098,7 @@
   </action>
   <action name="actionExit">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/exit.png</normaloff>:/icons/icons/exit.png</iconset>
    </property>
    <property name="text">
@@ -1020,7 +1110,7 @@
   </action>
   <action name="actionZoom">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/magnifier-zoom-in.png</normaloff>:/icons/icons/magnifier-zoom-in.png</iconset>
    </property>
    <property name="text">
@@ -1032,7 +1122,7 @@
   </action>
   <action name="actionZoom_out">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/magnifier-zoom-out.png</normaloff>:/icons/icons/magnifier-zoom-out.png</iconset>
    </property>
    <property name="text">
@@ -1047,7 +1137,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/grid.png</normaloff>:/icons/icons/grid.png</iconset>
    </property>
    <property name="text">
@@ -1062,7 +1152,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/edit-outline.png</normaloff>:/icons/icons/edit-outline.png</iconset>
    </property>
    <property name="text">
@@ -1074,7 +1164,7 @@
   </action>
   <action name="actionSave">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/disk-save.png</normaloff>:/icons/icons/disk-save.png</iconset>
    </property>
    <property name="text">
@@ -1086,7 +1176,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/arrow-180.png</normaloff>:/icons/icons/arrow-180.png</iconset>
    </property>
    <property name="text">
@@ -1098,7 +1188,7 @@
   </action>
   <action name="actionInitial_format">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/icons/icons/arrow-out.png</normaloff>:/icons/icons/arrow-out.png</iconset>
    </property>
    <property name="text">
@@ -1141,10 +1231,29 @@
     <slot>slot1()</slot>
    </slots>
   </customwidget>
+  <customwidget>
+   <class>DeviceView2</class>
+   <extends>QWidget</extends>
+   <header>deviceview2.h</header>
+   <container>1</container>
+   <slots>
+    <slot>setL1(double)</slot>
+    <slot>setL2(double)</slot>
+    <slot>setLoa(double)</slot>
+    <slot>setLbc(double)</slot>
+    <slot>setLdc(double)</slot>
+    <slot>setPhi(double)</slot>
+    <slot>setFrequency(double)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>DeviceView3</class>
+   <extends>QWidget</extends>
+   <header>deviceview3.h</header>
+   <container>1</container>
+  </customwidget>
  </customwidgets>
- <resources>
-  <include location="resources.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>doubleSpinBox_L1</sender>
@@ -1153,8 +1262,8 @@
    <slot>redrawPlots()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>235</x>
-     <y>137</y>
+     <x>159</x>
+     <y>101</y>
     </hint>
     <hint type="destinationlabel">
      <x>41</x>
@@ -1169,8 +1278,8 @@
    <slot>redrawPlots()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>235</x>
-     <y>170</y>
+     <x>159</x>
+     <y>101</y>
     </hint>
     <hint type="destinationlabel">
      <x>42</x>
@@ -1185,8 +1294,8 @@
    <slot>redrawPlots()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>235</x>
-     <y>203</y>
+     <x>159</x>
+     <y>101</y>
     </hint>
     <hint type="destinationlabel">
      <x>44</x>
@@ -1201,8 +1310,8 @@
    <slot>redrawPlots()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>235</x>
-     <y>236</y>
+     <x>159</x>
+     <y>101</y>
     </hint>
     <hint type="destinationlabel">
      <x>41</x>
@@ -1217,8 +1326,8 @@
    <slot>redrawPlots()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>235</x>
-     <y>269</y>
+     <x>159</x>
+     <y>101</y>
     </hint>
     <hint type="destinationlabel">
      <x>44</x>
@@ -1233,12 +1342,12 @@
    <slot>setL1(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>235</x>
-     <y>137</y>
+     <x>159</x>
+     <y>101</y>
     </hint>
     <hint type="destinationlabel">
-     <x>344</x>
-     <y>123</y>
+     <x>194</x>
+     <y>92</y>
     </hint>
    </hints>
   </connection>
@@ -1249,12 +1358,12 @@
    <slot>setL2(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>235</x>
-     <y>170</y>
+     <x>159</x>
+     <y>101</y>
     </hint>
     <hint type="destinationlabel">
-     <x>344</x>
-     <y>123</y>
+     <x>194</x>
+     <y>92</y>
     </hint>
    </hints>
   </connection>
@@ -1265,12 +1374,12 @@
    <slot>setL3(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>235</x>
-     <y>203</y>
+     <x>159</x>
+     <y>101</y>
     </hint>
     <hint type="destinationlabel">
-     <x>344</x>
-     <y>123</y>
+     <x>194</x>
+     <y>92</y>
     </hint>
    </hints>
   </connection>
@@ -1281,12 +1390,12 @@
    <slot>setFrequency(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>235</x>
-     <y>269</y>
+     <x>159</x>
+     <y>101</y>
     </hint>
     <hint type="destinationlabel">
-     <x>344</x>
-     <y>123</y>
+     <x>194</x>
+     <y>92</y>
     </hint>
    </hints>
   </connection>
@@ -1297,12 +1406,12 @@
    <slot>setPhi(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>235</x>
-     <y>236</y>
+     <x>159</x>
+     <y>101</y>
     </hint>
     <hint type="destinationlabel">
-     <x>344</x>
-     <y>123</y>
+     <x>194</x>
+     <y>92</y>
     </hint>
    </hints>
   </connection>
@@ -1313,12 +1422,124 @@
    <slot>setFrequency(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>221</x>
-     <y>249</y>
+     <x>159</x>
+     <y>101</y>
     </hint>
     <hint type="destinationlabel">
-     <x>279</x>
-     <y>249</y>
+     <x>194</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleSpinBox_L1_3</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>deviceview2</receiver>
+   <slot>setL1(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>195</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>303</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleSpinBox_L2_3</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>deviceview2</receiver>
+   <slot>setL2(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>242</x>
+     <y>163</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>284</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleSpinBox_L3_3</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>deviceview2</receiver>
+   <slot>setLoa(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>235</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>193</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleSpinBox</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>deviceview2</receiver>
+   <slot>setLbc(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>232</x>
+     <y>222</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>297</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleSpinBox_2</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>deviceview2</receiver>
+   <slot>setLdc(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>frequencySpinBox_3</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>deviceview2</receiver>
+   <slot>setFrequency(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>303</x>
+     <y>323</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleSpinBox_phi_3</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>deviceview2</receiver>
+   <slot>setPhi(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>182</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>324</x>
+     <y>289</y>
     </hint>
    </hints>
   </connection>

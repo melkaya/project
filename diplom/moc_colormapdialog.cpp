@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'colormapdialog.h'
 **
-** Created: Sat Dec 13 20:02:42 2014
+** Created: Tue Mar 31 20:56:06 2015
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ColorMapDialog[] = {
        4,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,12 +32,28 @@ static const uint qt_meta_data_ColorMapDialog[] = {
 
  // slots: signature, parameters, type, tag, flags
       16,   15,   15,   15, 0x08,
+      42,   15,   15,   15, 0x08,
+      68,   15,   15,   15, 0x08,
+      94,   15,   15,   15, 0x08,
+     120,   15,   15,   15, 0x08,
+     146,   15,   15,   15, 0x08,
+     172,   15,   15,   15, 0x08,
+     198,   15,   15,   15, 0x08,
+     224,   15,   15,   15, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_ColorMapDialog[] = {
-    "ColorMapDialog\0\0on_pushButton_clicked()\0"
+    "ColorMapDialog\0\0on_pushButton_9_clicked()\0"
+    "on_pushButton_8_clicked()\0"
+    "on_pushButton_7_clicked()\0"
+    "on_pushButton_6_clicked()\0"
+    "on_pushButton_5_clicked()\0"
+    "on_pushButton_4_clicked()\0"
+    "on_pushButton_3_clicked()\0"
+    "on_pushButton_2_clicked()\0"
+    "on_pushButton_clicked()\0"
 };
 
 const QMetaObject ColorMapDialog::staticMetaObject = {
@@ -69,10 +85,18 @@ int ColorMapDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: on_pushButton_clicked(); break;
+        case 0: on_pushButton_9_clicked(); break;
+        case 1: on_pushButton_8_clicked(); break;
+        case 2: on_pushButton_7_clicked(); break;
+        case 3: on_pushButton_6_clicked(); break;
+        case 4: on_pushButton_5_clicked(); break;
+        case 5: on_pushButton_4_clicked(); break;
+        case 6: on_pushButton_3_clicked(); break;
+        case 7: on_pushButton_2_clicked(); break;
+        case 8: on_pushButton_clicked(); break;
         default: ;
         }
-        _id -= 1;
+        _id -= 9;
     }
     return _id;
 }

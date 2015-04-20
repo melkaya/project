@@ -12,15 +12,21 @@ SOURCES += main.cpp \
     deviceview.cpp \
     plotview.cpp \
     colormapdialog.cpp \
-    deviceview_2.cpp \
-    deviceview_3.cpp
+    helpdialog.cpp \
+    deviceview2.cpp \
+    startdialog.cpp \
+    deviceview3.cpp
 HEADERS += mainwindow.h \
     deviceview.h \
     plotview.h \
     colormapdialog.h \
     ColorMap.h \
-    deviceview_2.h \
-    deviceview_3.h
+    helpdialog.h \
+    deviceview2.h \
+    startdialog.h \
+    deviceview3.h
 FORMS += mainwindow.ui \
-    colormapdialog.ui
+    colormapdialog.ui \
+    helpdialog.ui \
+    startdialog.ui
 RESOURCES += resources.qrc

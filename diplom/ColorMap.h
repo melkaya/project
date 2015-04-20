@@ -8,6 +8,9 @@ struct ColorMap{
     QColor triangle;
     QColor rectangle;
     QColor Line;
+    QColor Hinge;
+    QColor Piston;
+    QColor Contour;
 };
 
 #endif // COLORMAP_H
